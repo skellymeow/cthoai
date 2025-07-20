@@ -1,0 +1,16 @@
+## ⚠️ Framer Motion & Next.js: Export * Error
+
+If you see this error:
+
+```
+Error: It's currently unsupported to use "export *" in a client boundary. Please use named exports instead.
+```
+
+This means you are importing `framer-motion` in a file that is used by a Next.js server component or shared between server and client. **Framer Motion must only be imported in client components.**
+
+### How to Fix
+- Only use `import { motion } from 'framer-motion'` in files that start with `'use client'` at the top.
+- Never import framer-motion in server components, shared files, or files that are imported by server components.
+- If you need animation in a page or component, add `'use client'` at the top of the file.
+
+**This is a Next.js/React limitation.**

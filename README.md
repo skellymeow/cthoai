@@ -29,7 +29,35 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## AI Image Generation Setup
+
+## Environment Variables
+
+Create a `.env.local` file in the root directory and add your Replicate API token:
+
+```bash
+REPLICATE_API_TOKEN=your_replicate_api_token_here
+```
+
+You can get your API token from [Replicate's account page](https://replicate.com/account/api-tokens).
+
+## Available Models
+
+The AI image generation feature supports the following models:
+
+- **Imagen 4 Fast** (`google/imagen-4-fast`) - High-quality fast generation
+- **SDXL** (`stability-ai/sdxl`) - Stable Diffusion XL
+- **Stable Diffusion** (`stability-ai/stable-diffusion`) - Open source generation
+- **SD v1.5** (`runwayml/stable-diffusion-v1-5`) - Classic Stable Diffusion
+
+## Aspect Ratios
+
+Supported aspect ratios:
+- Square (1:1)
+- Landscape (4:3)
+- Portrait (3:4)
+
+# Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
